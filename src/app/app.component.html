@@ -6,20 +6,19 @@
 
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title" i18n>Angular i18n localization</h5>
-      <h6 class="card-subtitle mb-2 text-muted" i18n>Localizable content</h6>
-      <p class="card-text" i18n>
-        With i18n you have a wide range of options to localize your application. Angular i18n gives you tooling to localize the following
-        parts of your application.
+      <h5 class="card-title">Angular ngxTranslate localization</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Localizable content</h6>
+      <p class="card-text">
+        With ngxTranslate you have a wide range of options to localize your application.
       </p>
       <ul>
-        <li i18n>Texts</li>
-        <li i18n>Dates</li>
-        <li i18n>Numbers</li>
-        <li i18n>Percentages</li>
-        <li i18n>Currencies</li>
+        <li>Texts</li>
+        <li>Dates</li>
+        <li>Numbers</li>
+        <li>Percentages</li>
+        <li>Currencies</li>
       </ul>
-      <p i18n>You are also able to handle plural forms of words and alternative texts of images and other html components.</p>
+      <p>You are also able to handle plural forms of words and alternative texts of images and other html components.</p>
     </div>
   </div>
 
@@ -27,7 +26,7 @@
 
   <div class="card">
     <div class="card-body">
-      <p class="card-text" i18n>
+      <p class="card-text">
         Since your last registration on {{now | date:'shortDate'}}, {{minutes}} new articles have been published.
       </p>
     </div>
@@ -38,7 +37,7 @@
   <div class="card-group">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title" i18n>Dates</h5>
+        <h5 class="card-title">Dates</h5>
         <p class="card-text">
           <small>{{ now | date:'fullDate' }}</small>
         </p>
@@ -52,7 +51,7 @@
     </div>
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title" i18n>Numbers</h5>
+        <h5 class="card-title">Numbers</h5>
         <p class="card-text">
           {{ 100000000 | number }}
         </p>
@@ -66,7 +65,7 @@
     </div>
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title" i18n>Currencies</h5>
+        <h5 class="card-title">Currencies</h5>
         <p class="card-text">
           <small>{{ 1000000 | currency }}</small>
         </p>
@@ -80,7 +79,7 @@
   <div class="card-group">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title" i18n>Percentages</h5>
+        <h5 class="card-title">Percentages</h5>
         <p class="card-text">
           <small>{{ 1.2 | percent }}</small>
         </p>
@@ -94,24 +93,24 @@
     </div>
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title" i18n>Plurals</h5>
+        <h5 class="card-title">Plurals</h5>
         <p class="card-text">
-          <span i18n>Updated { minutes, plural, =0 {just now} =1 {one minute ago} other { {{minutes}} minutes ago } }</span>
+          <span>Updated { minutes, plural, =0 {just now} =1 {one minute ago} other { {{minutes}} minutes ago } }</span>
         </p>
         <button class="btn btn-sm btn-primary" (click)="minutes = minutes - 1;">-</button>
-        <span i18n>minutes: {{ minutes }}</span>
+        <span>minutes: {{ minutes }}</span>
         <button class="btn btn-sm btn-primary" (click)="minutes = minutes + 1;">+</button>
       </div>
     </div>
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title" i18n>Alternative texts</h5>
+        <h5 class="card-title">Alternative texts</h5>
         <p class="card-text">
-            <span i18n>The author is {gender, select, m {male} f {female} o {other}}</span>
+            <span>The author is {gender, select, m {male} f {female} o {other}}</span>
         </p>
-        <button class="btn btn-sm btn-primary" (click)="gender = 'f'" i18n>Female</button>
-        <button class="btn btn-sm btn-primary" (click)="gender = 'm'" i18n>Male</button>
-        <button class="btn btn-sm btn-primary" (click)="gender = 'o'" i18n>Other</button>
+        <button class="btn btn-sm btn-primary" (click)="gender = 'f'">Female</button>
+        <button class="btn btn-sm btn-primary" (click)="gender = 'm'">Male</button>
+        <button class="btn btn-sm btn-primary" (click)="gender = 'o'">Other</button>
       </div>
     </div>
   </div>
