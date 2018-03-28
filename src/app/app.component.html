@@ -6,19 +6,17 @@
 
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Angular ngxTranslate localization</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Localizable content</h6>
-      <p class="card-text">
-        With ngxTranslate you have a wide range of options to localize your application.
-      </p>
+      <h5 class="card-title" translate>HOME.TITLE</h5>
+      <h6 class="card-subtitle mb-2 text-muted" translate>HOME.SUBTITLE</h6>
+      <p class="card-text" translate>HOME.NGXOPTIONS</p>
       <ul>
-        <li>Texts</li>
-        <li>Dates</li>
-        <li>Numbers</li>
-        <li>Percentages</li>
-        <li>Currencies</li>
+        <li translate>HOME.TEXTS</li>
+        <li translate>HOME.DATES</li>
+        <li translate>HOME.NUMBERS</li>
+        <li translate>HOME.PERCENTAGES</li>
+        <li translate>HOME.CURRENCIES</li>
       </ul>
-      <p>You are also able to handle plural forms of words and alternative texts of images and other html components.</p>
+      <p translate>HOME.PLURALALTERNATIVES</p>
     </div>
   </div>
 
@@ -26,8 +24,8 @@
 
   <div class="card">
     <div class="card-body">
-      <p class="card-text">
-        Since your last registration on {{now | date:'shortDate'}}, {{minutes}} new articles have been published.
+      <p class="card-text" translate [translateParams]="{date: now | date:'long':'':translate.currentLang, count: minutes}">
+        HOME.TEXTWITHPARAMAS
       </p>
     </div>
   </div>
@@ -37,40 +35,40 @@
   <div class="card-group">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Dates</h5>
+        <h5 class="card-title" translate>HOME.DATES</h5>
         <p class="card-text">
-          <small>{{ now | date:'fullDate' }}</small>
+          {{ now | date:'longDate':'':translate.currentLang }}
         </p>
         <p class="card-text">
-          <small>{{ now | date:'longDate' }}</small>
-        </p>
+          {{ now | date:'shortDate':'':translate.currentLang }}
+          </p>
         <p class="card-text">
-          <small>{{ now | date:'short' }}</small>
-        </p>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Numbers</h5>
-        <p class="card-text">
-          {{ 100000000 | number }}
-        </p>
-        <p class="card-text">
-          {{ 100000.23 | number }}
-        </p>
-        <p class="card-text">
-          {{ 51.043534423 | number }}
+          {{ now | date:'short':'':translate.currentLang }}
         </p>
       </div>
     </div>
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Currencies</h5>
+        <h5 class="card-title" translate>HOME.NUMBERS</h5>
         <p class="card-text">
-          <small>{{ 1000000 | currency }}</small>
+          {{ 100000000 | number:'':translate.currentLang }}
         </p>
         <p class="card-text">
-          <small>{{ 100.15 | currency }}</small>
+          {{ 100000.23 | number:'':translate.currentLang }}
+        </p>
+        <p class="card-text">
+          {{ 51.043534423 | number:'':translate.currentLang }}
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title" translate>HOME.CURRENCIES</h5>
+        <p class="card-text">
+          {{ 1000000 | currency:'CHF':'code':'':translate.currentLang }}
+        </p>
+        <p class="card-text">
+          {{ 100.15 | currency:'CHF':'code':'':translate.currentLang }}
         </p>
       </div>
     </div>
@@ -79,38 +77,38 @@
   <div class="card-group">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Percentages</h5>
+        <h5 class="card-title" translate>HOME.PERCENTAGES</h5>
         <p class="card-text">
-          <small>{{ 1.2 | percent }}</small>
+          {{ 1.2 | percent:'':translate.currentLang }}
         </p>
         <p class="card-text">
-          <small>{{ 0.034532 | percent:'0.2-2' }}</small>
+          {{ 0.034532 | percent:'0.2-2':translate.currentLang }}
         </p>
         <p class="card-text">
-          <small>{{ 0.00011255 | percent:'0.3-5' }}</small>
+          {{ 0.00011255 | percent:'0.3-5':translate.currentLang }}
         </p>
       </div>
     </div>
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Plurals</h5>
+        <h5 class="card-title" translate>HOME.PLURALS</h5>
         <p class="card-text">
           <span>Updated { minutes, plural, =0 {just now} =1 {one minute ago} other { {{minutes}} minutes ago } }</span>
         </p>
         <button class="btn btn-sm btn-primary" (click)="minutes = minutes - 1;">-</button>
-        <span>minutes: {{ minutes }}</span>
+        <span translate [translateParams]="{minutes:minutes}">HOME.MINUTES</span>
         <button class="btn btn-sm btn-primary" (click)="minutes = minutes + 1;">+</button>
       </div>
     </div>
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Alternative texts</h5>
+        <h5 class="card-title" translate>HOME.ALTERNATETEXTS</h5>
         <p class="card-text">
             <span>The author is {gender, select, m {male} f {female} o {other}}</span>
         </p>
-        <button class="btn btn-sm btn-primary" (click)="gender = 'f'">Female</button>
-        <button class="btn btn-sm btn-primary" (click)="gender = 'm'">Male</button>
-        <button class="btn btn-sm btn-primary" (click)="gender = 'o'">Other</button>
+        <button class="btn btn-sm btn-primary" (click)="gender = 'f'" translate>HOME.FEMALE</button>
+        <button class="btn btn-sm btn-primary" (click)="gender = 'm'" translate>HOME.MALE</button>
+        <button class="btn btn-sm btn-primary" (click)="gender = 'o'" translate>HOME.OTHER</button>
       </div>
     </div>
   </div>

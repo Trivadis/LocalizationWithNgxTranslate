@@ -1,0 +1,8 @@
+a {
+    cursor: pointer;
+    color: lightgray !important;
+}
+
+.active {
+    color: inherit !important;
+}

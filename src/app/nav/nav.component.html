@@ -1,9 +1,9 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
   <h5 class="my-0 mr-md-auto font-weight-normal">Angular ngxTranslate</h5>
   <nav class="my-2 my-md-0 mr-md-3">
-    <a class="p-2 text-dark" href="#">English</a>
-    <a class="p-2 text-dark" href="#">German</a>
-    <a class="p-2 text-dark" href="#">French</a>
-    <a class="p-2 text-dark" href="#">Italian</a>
+    <a class="p-2 text-dark" [class.active]="translate.currentLang == 'en'" (click)="changeLanguage('en')">English</a>
+    <a class="p-2 text-dark" [class.active]="translate.currentLang == 'de-CH'" (click)="changeLanguage('de-CH')">Deutsch</a>
+    <a class="p-2 text-dark" [class.active]="translate.currentLang == 'fr'" (click)="changeLanguage('fr')">Français</a>
+    <a class="p-2 text-dark" [class.active]="translate.currentLang == 'it'" (click)="changeLanguage('it')">Italiano</a>
   </nav>
 </div>

@@ -1,0 +1,26 @@
+{
+	"HOME": {
+		"TITLE": "Angular ngxTranslate localization",
+		"SUBTITLE": "Localizable content",
+		"NGXOPTIONS": "With ngxTranslate you have a wide range of options to localize your application.",
+		"TEXTS": "Texts",
+		"DATES": "Dates",
+		"NUMBERS": "Numbers",
+		"PERCENTAGES": "Percentages",
+		"CURRENCIES": "Currencies",
+		"PLURALS": "Plurals",
+		"PLURALALTERNATIVES": "You are also able to handle plural forms of words and alternative texts of images and other html components.",
+		"TEXTWITHPARAMAS": "Since your last login at {{date}}, {{count}} new articles have been published.",
+		"MINUTES": "minutes: {{minutes}}",
+		"ALTERNATETEXTS": "Alternatives",
+		"MALE": "male",
+		"FEMALE": "female",
+		"OTHER": "other"
+	},
+	"NAV": {
+		"EN": "English",
+		"DE": "German",
+		"FR": "French",
+		"IT": "Italian"
+	}
+}

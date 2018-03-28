@@ -1,0 +1,22 @@
+{
+	"HOME": {
+		"TITLE": "Angular ngxTranslate Übersetzungen",
+		"SUBTITLE": "Übersetzbare Inhalte",
+		"NGXOPTIONS": "Mit ngxTranslate hast du eine breite Palette an optionen um deine Applikation zu übersetzen.",
+		"TEXTS": "Texte",
+		"DATES": "Daten",
+		"NUMBERS": "Zahlen",
+		"PERCENTAGES": "Prozente",
+		"CURRENCIES": "Währungen",
+		"PLURALS": "Mehrzahlen",
+		"PLURALALTERNATIVES": "Es ist ebenfalls möglich mehrzahlen und alternative Texte z.B. Gender zu übersetzen.",
+		"TEXTWITHPARAMAS": "Seit deiner letzen Anmeldung am {{date}}, sind {{count}} neue Artikel erschienen.",
+		"MINUTES": "Minuten: {{minutes}}"
+	},
+	"NAV": {
+		"EN": "Englisch",
+		"DE": "Deutsch",
+		"FR": "Französisch",
+		"IT": "Italienisch"
+	}
+}
