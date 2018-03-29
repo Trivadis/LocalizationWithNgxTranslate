@@ -25,7 +25,7 @@ registerLocaleData(localeIT);
 // define the translate loader with the file location
 // because this project is hosted on github pages the path is diffrent
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, "./AngularNgxTranslate/assets/i18n/");
+  return new TranslateHttpLoader(http, "./assets/i18n/");
 }
 
 @NgModule({
