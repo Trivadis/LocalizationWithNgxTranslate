@@ -93,10 +93,10 @@
       <div class="card-body">
         <h5 class="card-title" translate>HOME.PLURALS</h5>
         <p class="card-text">
-          <span>Updated { minutes, plural, =0 {just now} =1 {one minute ago} other { {{minutes}} minutes ago } }</span>
+          {{ 'HOME.TIME' | translate:{minutes:minutes} | translateSelector:minutes }}
         </p>
         <button class="btn btn-sm btn-primary" (click)="minutes = minutes - 1;">-</button>
-        <span translate [translateParams]="{minutes:minutes}">HOME.MINUTES</span>
+        <button class="btn btn-sm btn-light">&nbsp;&nbsp;{{minutes}}&nbsp;&nbsp;</button>
         <button class="btn btn-sm btn-primary" (click)="minutes = minutes + 1;">+</button>
       </div>
     </div>
@@ -104,7 +104,7 @@
       <div class="card-body">
         <h5 class="card-title" translate>HOME.ALTERNATETEXTS</h5>
         <p class="card-text">
-            <span>The author is {gender, select, m {male} f {female} o {other}}</span>
+            <span>{{ 'HOME.THEAUTHOR' | translate }} <strong>{{ 'HOME.GENDER' | translate:{gender:gender} | translateSelector:gender }}</strong></span>
         </p>
         <button class="btn btn-sm btn-primary" (click)="gender = 'f'" translate>HOME.FEMALE</button>
         <button class="btn btn-sm btn-primary" (click)="gender = 'm'" translate>HOME.MALE</button>

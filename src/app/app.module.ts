@@ -14,6 +14,7 @@ import { registerLocaleData } from '@angular/common';
 import localeDECH from '@angular/common/locales/de-CH';
 import localeFR from '@angular/common/locales/fr';
 import localeIT from '@angular/common/locales/it';
+import { TranslateSelectorPipe } from './pipes/TranslteSelectorPipe';
 
 registerLocaleData(localeDECH);
 registerLocaleData(localeFR);
@@ -25,7 +26,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TranslateSelectorPipe
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

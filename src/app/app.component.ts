@@ -11,7 +11,7 @@ export class AppComponent {
   title: string = 'AngularLocalization';
   now: Date = new Date();
   minutes: number = 0;
-  gender: string = "o";
+  gender: string = "?";
 
   constructor(public translate: TranslateService) {
 
