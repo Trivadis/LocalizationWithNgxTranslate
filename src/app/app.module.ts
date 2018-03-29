@@ -9,7 +9,9 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { NavModule } from './nav/nav.module';
 
-/* Import all needed locals and register them */
+/* 
+Import all needed locals and register them this is for dates, numbers, percentage and concurencies
+*/
 import { registerLocaleData } from '@angular/common';
 import localeDECH from '@angular/common/locales/de-CH';
 import localeFR from '@angular/common/locales/fr';
@@ -20,8 +22,10 @@ registerLocaleData(localeDECH);
 registerLocaleData(localeFR);
 registerLocaleData(localeIT);
 
+// define the translate loader with the file location
+// because this project is hosted on github pages the path is diffrent
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, "./AngularNgxTranslate/assets/i18n/");
 }
 
 @NgModule({
