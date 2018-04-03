@@ -128,7 +128,7 @@ Detailed information of all pipes are available at the official angular document
 
 #### ICU (plurals, genders and more)
 
-To achive localization of ICU's a custom pipe is needed. You can use the [`TranslateSelectorPipe`](https://github.com/raphibolliger/AngularNgxTranslate/blob/master/src/app/pipes/TranslteSelectorPipe.ts) implementation of this project
+To achive localization of ICU's a custom pipe is needed. You can use the [`TranslateSelectorPipe`](https://github.com/raphibolliger/AngularNgxTranslate/blob/master/src/app/pipes/TranslteSelectorPipe.ts) implementation of this project.
 
 ```html
 <span>
@@ -136,8 +136,8 @@ To achive localization of ICU's a custom pipe is needed. You can use the [`Trans
     <strong>{{ 'HOME.GENDER' | translate:{gender:gender} | translateSelector:gender }}</strong>
 </span>
 ```
-This TranslateSelectorPipe implementation was crated by @atiris you can find the original source [here](https://github.com/ngx-translate/core/issues/150#issuecomment-330825289).
+This TranslateSelectorPipe implementation was crated by [@atiris](https://github.com/atiris) you can find the original source [here](https://github.com/ngx-translate/core/issues/150#issuecomment-330825289).
 
-### Switch language
+### Switch between languages
 
-
+With the language service it's easy to switch between languages. To switch to the required language, call `translate.use(lang: string)`
