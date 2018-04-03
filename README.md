@@ -139,5 +139,8 @@ To achive localization of ICU's a custom pipe is needed. You can use the [`Trans
 This TranslateSelectorPipe implementation was crated by [@atiris](https://github.com/atiris) you can find the original source [here](https://github.com/ngx-translate/core/issues/150#issuecomment-330825289).
 
 ### Switch between languages
-
 With the language service it's easy to switch between languages. To switch to the required language, call `translate.use(lang: string)`
+
+# Documentation and help
+A complete guide and more examples for ngxTranslate can be found at the official GitHub repository.  
+https://github.com/ngx-translate/core
