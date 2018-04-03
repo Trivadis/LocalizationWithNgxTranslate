@@ -1,6 +1,7 @@
 # Angular localization with ngxTranslate
 
 Demo project for Angular localization with ngxTranslate. Clone this project and install all dependencies for a working playgorund.
+Visit the live demo at https://raphibolliger.github.io/AngularNgxTranslate/
 
 ## Localizing workflow
 
@@ -8,9 +9,9 @@ Demo project for Angular localization with ngxTranslate. Clone this project and 
 
 First you need to install the right npm module. This depends on your Angular version.
 
-- Angular <  4.0.0 use @ngx-translate/core@^7.2.2
-- Angular <  6.0.0 use @ngx-translate/core@^9.1.1
-- Angular >= 6.0.0 use @ngx-translate/core
+- `Angular <  4.0.0` use `@ngx-translate/core@^7.2.2`
+- `Angular <  6.0.0` use `@ngx-translate/core@^9.1.1`
+- `Angular >= 6.0.0` use `@ngx-translate/core`
 
 ### Imports
 
