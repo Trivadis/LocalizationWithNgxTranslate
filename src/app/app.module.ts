@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+// ngxTranslate imports
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -9,22 +11,23 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { NavModule } from './nav/nav.module';
 
-/* 
-Import all needed locals and register them this is for dates, numbers, percentage and concurencies
-*/
+// imports for native i18n support for dates, numbers, percentages
 import { registerLocaleData } from '@angular/common';
 import localeDECH from '@angular/common/locales/de-CH';
 import localeFR from '@angular/common/locales/fr';
 import localeIT from '@angular/common/locales/it';
-import { TranslateSelectorPipe } from './pipes/TranslteSelectorPipe';
 
+// register each native i18n locale
 registerLocaleData(localeDECH);
 registerLocaleData(localeFR);
 registerLocaleData(localeIT);
 
+// icu import 
+import { TranslateSelectorPipe } from './pipes/TranslteSelectorPipe';
+
 // define the translate loader with the file location
-// because this project is hosted on github pages the path is diffrent
-export function HttpLoaderFactory(http: HttpClient) {
+// needs prefix parameter because app is not in root folder on github pages
+export function TranslateLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/");
 }
 
@@ -41,7 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
+        useFactory: TranslateLoaderFactory,
         deps: [HttpClient]
       }
     })

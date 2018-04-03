@@ -9,7 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
   ],
   imports: [
       CommonModule,
-      TranslateModule.forChild()
+      //TranslateModule.forChild()
   ],
   exports: [
       NavComponent

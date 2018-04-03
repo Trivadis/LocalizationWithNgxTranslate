@@ -17,6 +17,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'translateSelector'
 })
+
 export class TranslateSelectorPipe implements PipeTransform {
 
   transform(text: string, value: string | number): string {
