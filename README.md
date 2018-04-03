@@ -85,7 +85,7 @@ registerLocaleData(localeIT);
 ### Localize elements
 
 #### Texts and strings
-You three ways how to achive the translation of texts
+You have three ways how to achive the translation of texts
 
 1. Use the **service**
 2. Use the **pipe**
@@ -112,6 +112,19 @@ Add translate attributes to html tags
 ```
 
 #### Dates, numbers, percentages and currencies
+To localize dates etc. you can use the built in native pipes. Extract the actual locale with the service and set it as a parameter in the native pipes.
+
+Following code shows a example with a date. You have to provide each parameter of the date pipe.
+```html
+<p class="card-text">{{ now | date:'shortDate':'':translate.currentLang }}</p>
+```
+
+Full documentations of other pipes are available at the official angular page
+
+- Dates: https://angular.io/api/common/DatePipe
+- Numbers: https://angular.io/api/common/DecimalPipe
+- Percentages: https://angular.io/api/common/PercentPipe
+- Currencies: https://angular.io/api/common/CurrencyPipe
 
 #### ICU (plurals and genders)
 
