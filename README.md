@@ -119,7 +119,7 @@ Following code shows a example with a date. You have to provide each parameter o
 <p class="card-text">{{ now | date:'shortDate':'':translate.currentLang }}</p>
 ```
 
-Full documentations of other pipes are available at the official angular page
+Detailed information of all pipes are available at the official angular documentation
 
 - Dates: https://angular.io/api/common/DatePipe
 - Numbers: https://angular.io/api/common/DecimalPipe
@@ -127,6 +127,16 @@ Full documentations of other pipes are available at the official angular page
 - Currencies: https://angular.io/api/common/CurrencyPipe
 
 #### ICU (plurals, genders and more)
+
+To achive localization of ICU's a custom pipe is needed. You can use the [`TranslateSelectorPipe`](https://github.com/raphibolliger/AngularNgxTranslate/blob/master/src/app/pipes/TranslteSelectorPipe.ts) implementation of this project
+
+```html
+<span>
+    {{ 'HOME.THEAUTHOR' | translate }}
+    <strong>{{ 'HOME.GENDER' | translate:{gender:gender} | translateSelector:gender }}</strong>
+</span>
+```
+This TranslateSelectorPipe implementation was crated by @atiris you can find the original source [here](https://github.com/ngx-translate/core/issues/150#issuecomment-330825289).
 
 ### Switch language
 
