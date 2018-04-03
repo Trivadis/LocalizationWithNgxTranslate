@@ -17,7 +17,7 @@ First you need to install the right npm module. This depends on your Angular ver
 
 ### Translation file
 
-You need a JSON resource file for each language. Default location is `assets/i18n/xx-XX.json`. The resource file contains keys and related texts.
+You need a JSON resource file for each language. Default location is [`assets/i18n/xx-XX.json`](https://github.com/raphibolliger/AngularNgxTranslate/tree/master/src/assets/i18n). The resource file contains keys and related texts.
 ```JSON
 {
     "HOME": {
@@ -126,7 +126,7 @@ Full documentations of other pipes are available at the official angular page
 - Percentages: https://angular.io/api/common/PercentPipe
 - Currencies: https://angular.io/api/common/CurrencyPipe
 
-#### ICU (plurals and genders)
+#### ICU (plurals, genders and more)
 
 ### Switch language
 
