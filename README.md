@@ -21,12 +21,12 @@ You need a JSON resource file for each language. Default location is `assets/i18
 ```JSON
 {
     "HOME": {
-		"TITLE": "Angular ngxTranslate localization",
-        "...": "..."
+        "TITLE": "Angular ngxTranslate localization",
+        ...
     },
     "NAV": {
         "EN": "English",
-        "...": "..."
+        ...
     }
 }
 ```
