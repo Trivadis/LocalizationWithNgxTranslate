@@ -9,7 +9,7 @@
 		"PERCENTAGES": "Prozente",
 		"CURRENCIES": "Währungen",
 		"PLURALS": "Mehrzahlen",
-		"PLURALALTERNATIVES": "Es ist ebenfalls möglich mehrzahlen und alternative Texte z.B. Gender zu übersetzen.",
+		"PLURALALTERNATIVES": "Es ist ebenfalls möglich z.B. Mehrzahlen und Geschlechter im ICU Format zu übersetzen.",
 		"TEXTWITHPARAMAS": "Seit deiner letzen Anmeldung am {{date}}, sind {{count}} neue Artikel erschienen.",
 		"HELLO": "Hallo, {{name}}",
 		"SHOWALERT": "Warnung anzeigen",
