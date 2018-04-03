@@ -16,17 +16,25 @@
         <li translate>HOME.PERCENTAGES</li>
         <li translate>HOME.CURRENCIES</li>
       </ul>
-      <p translate>HOME.PLURALALTERNATIVES</p>
+      <p class="card-text" translate>HOME.PLURALALTERNATIVES</p>
     </div>
   </div>
 
   <hr>
 
-  <div class="card">
-    <div class="card-body">
-      <p class="card-text" translate [translateParams]="{date: now | date:'long':'':translate.currentLang, count: minutes}">
-        HOME.TEXTWITHPARAMAS
-      </p>
+  <div class="card-group">
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text">{{ 'HOME.HELLO' | translate:{name:userName} }}</p>
+        <p class="card-text" translate [translateParams]="{date: now | date:'long':'':translate.currentLang, count: minutes}">
+          HOME.TEXTWITHPARAMAS
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body text-center">
+        <button class="btn btn-large btn-danger" (click)="showWarning()" translate>HOME.SHOWALERT</button>
+      </div>
     </div>
   </div>
 
@@ -41,7 +49,7 @@
         </p>
         <p class="card-text">
           {{ now | date:'shortDate':'':translate.currentLang }}
-          </p>
+        </p>
         <p class="card-text">
           {{ now | date:'short':'':translate.currentLang }}
         </p>
@@ -104,7 +112,9 @@
       <div class="card-body">
         <h5 class="card-title" translate>HOME.ALTERNATETEXTS</h5>
         <p class="card-text">
-            <span>{{ 'HOME.THEAUTHOR' | translate }} <strong>{{ 'HOME.GENDER' | translate:{gender:gender} | translateSelector:gender }}</strong></span>
+          <span>{{ 'HOME.THEAUTHOR' | translate }}
+            <strong>{{ 'HOME.GENDER' | translate:{gender:gender} | translateSelector:gender }}</strong>
+          </span>
         </p>
         <button class="btn btn-sm btn-primary" (click)="gender = 'f'" translate>HOME.FEMALE</button>
         <button class="btn btn-sm btn-primary" (click)="gender = 'm'" translate>HOME.MALE</button>

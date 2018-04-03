@@ -68,7 +68,7 @@ export function TranslateLoaderFactory(http: HttpClient) {
 })
 ```
 
-To have native i18n support for dates, numbers, percentages and concurrencies you need to import and register each locale in `app.module.ts`
+To have native i18n support for dates, numbers, percentages and currencies you need to import and register each locale in `app.module.ts`
 ```TypeScript
 // imports for native i18n support for dates, numbers, percentages
 import { registerLocaleData } from '@angular/common';
@@ -85,8 +85,33 @@ registerLocaleData(localeIT);
 ### Localize elements
 
 #### Texts and strings
+You three ways how to achive the translation of texts
 
-#### Dates, numbers, percentages and concurrencies
+1. Use the **service**
+2. Use the **pipe**
+3. Use the **directive**
+
+##### Service
+Use the service to translate strings directly in components
+```TypeScript
+translate.get('HOME.HELLO', {name: userName}).subscribe((res: string) => {
+    console.log(res); // => 'Hi, Raphael Bolliger'
+});
+```
+
+##### Pipe
+Use the pipe directly in html tags
+```html
+<p>{{ 'HOME.HELLO' | translate:{name:userName} }}</p>
+```
+
+##### Directive
+Add translate attributes to html tags
+```html
+<p translate [translateParams]="{name: userName}">HOME.HELLO</p>
+```
+
+#### Dates, numbers, percentages and currencies
 
 #### ICU (plurals and genders)
 
