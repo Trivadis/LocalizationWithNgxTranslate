@@ -21,20 +21,21 @@ You need a JSON resource file for each language. Default location is `assets/i18
 
 ### Imports and definitions
 Import `TranslateModule`, `TranslateLoader` and `TranslateHttpLoader` in `app.module.ts` the HttpLoader is used to load translation files from assets folder.
-```
+
+```TypeScript
 // ngxTranslate imports
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 ```
 
-```
+```TypeScript
 // define the translate file loader
 export function TranslateLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 ```
 
-```
+```TypeScript
 @NgModule({
   declarations: [ ... ],
   imports: [
@@ -54,7 +55,19 @@ export function TranslateLoaderFactory(http: HttpClient) {
 })
 ```
 
+To have native i18n support for dates, numbers, percentages and concurrencies you need to import end register each locale
+```TypeScript
+// imports for native i18n support for dates, numbers, percentages
+import { registerLocaleData } from '@angular/common';
+import localeDECH from '@angular/common/locales/de-CH';
+import localeFR from '@angular/common/locales/fr';
+import localeIT from '@angular/common/locales/it';
 
+// register each native i18n locale
+registerLocaleData(localeDECH);
+registerLocaleData(localeFR);
+registerLocaleData(localeIT);
+```
 
 ### Localize elements
 
