@@ -20,13 +20,13 @@ First you need to install the right npm module. This depends on your Angular ver
 You need a JSON resource file for each language. Default location is `assets/i18n/xx-XX.json`. The resource file contains keys and related texts.
 ```JSON
 {
-	"HOME": {
+    "HOME": {
 		"TITLE": "Angular ngxTranslate localization",
-        ...
+        "...": "..."
     },
     "NAV": {
         "EN": "English",
-        ...
+        "...": "..."
     }
 }
 ```
