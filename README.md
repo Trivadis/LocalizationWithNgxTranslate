@@ -17,7 +17,20 @@ First you need to install the right npm module. This depends on your Angular ver
 
 ### Translation file
 
-You need a JSON resource file for each language. Default location is `assets/i18n/xx-XX.json`
+You need a JSON resource file for each language. Default location is `assets/i18n/xx-XX.json`. The resource file contains keys and related texts.
+```JSON
+{
+	"HOME": {
+		"TITLE": "Angular ngxTranslate localization",
+        ...
+    },
+    "NAV": {
+        "EN": "English",
+        ...
+    }
+}
+```
+It is possible to define nested elements in JSON resource files.
 
 ### Imports and definitions
 Import `TranslateModule`, `TranslateLoader` and `TranslateHttpLoader` in `app.module.ts` the HttpLoader is used to load translation files from assets folder.
@@ -55,7 +68,7 @@ export function TranslateLoaderFactory(http: HttpClient) {
 })
 ```
 
-To have native i18n support for dates, numbers, percentages and concurrencies you need to import end register each locale
+To have native i18n support for dates, numbers, percentages and concurrencies you need to import and register each locale in `app.module.ts`
 ```TypeScript
 // imports for native i18n support for dates, numbers, percentages
 import { registerLocaleData } from '@angular/common';
