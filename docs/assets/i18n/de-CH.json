@@ -6,7 +6,7 @@
 		"TEXTS": "Texte",
 		"DATES": "Daten",
 		"NUMBERS": "Zahlen",
-		"PERCENTAGES": "Prozente",
+		"PERCENTAGES": "Prozentsätze",
 		"CURRENCIES": "Währungen",
 		"PLURALS": "Mehrzahlen",
 		"PLURALALTERNATIVES": "Es ist ebenfalls möglich z.B. Mehrzahlen und Geschlechter im ICU Format zu übersetzen.",
