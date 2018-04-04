@@ -7,13 +7,24 @@ Visit the live demo at https://raphibolliger.github.io/AngularNgxTranslate/
 
 ## Localizing workflow
 
-### Install ngxTranslate
+### Install ngxTranslate and httploader
 
 First you need to install the right npm module. This depends on your Angular version.
 
 - `Angular <  4.0.0` use `@ngx-translate/core@^7.2.2`
 - `Angular <  6.0.0` use `@ngx-translate/core@^9.1.1`
 - `Angular >= 6.0.0` use `@ngx-translate/core`
+
+To load the translations definitions from JSON files you need the `ngxTranslate HttpLoader` module. This modul version depends also on your Angular version.
+
+- `Angular <  4.3.0` use `@ngx-translate/http-loader@^0.1.0`
+- `Angular <  6.0.0` use `@ngx-translate/http-loader@^2.0.1`
+- `Angular >= 6.0.0` use `@ngx-translate/http-loader`
+
+Actual status information about versions and dependencies are available at the official GitHub repositories.
+
+- [ngx-translate/core](https://github.com/ngx-translate/core)
+- [ngx-translate/http-loader](https://github.com/ngx-translate/http-loader)
 
 ### Translation file
 
