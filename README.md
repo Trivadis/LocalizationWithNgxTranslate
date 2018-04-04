@@ -44,7 +44,7 @@ You need a JSON resource file for each language. Default location is [`assets/i1
 It is possible to define nested elements in JSON resource files.
 
 ### Imports and definitions
-Import `TranslateModule`, `TranslateLoader` and `TranslateHttpLoader` in `app.module.ts` the HttpLoader is used to load translation files from assets folder.
+Import `TranslateModule`, `TranslateLoader` and `TranslateHttpLoader` in [`app.module.ts`](https://github.com/raphibolliger/AngularNgxTranslate/blob/master/src/app/app.module.ts) the HttpLoader is used to load translation files from assets folder.
 
 ```TypeScript
 // ngxTranslate imports
@@ -79,7 +79,7 @@ export function TranslateLoaderFactory(http: HttpClient) {
 })
 ```
 
-To have native i18n support for dates, numbers, percentages and currencies you need to import and register each locale in `app.module.ts`
+To have native i18n support for dates, numbers, percentages and currencies you need to import and register each locale in [`app.module.ts`](https://github.com/raphibolliger/AngularNgxTranslate/blob/master/src/app/app.module.ts)
 ```TypeScript
 // imports for native i18n support for dates, numbers, percentages
 import { registerLocaleData } from '@angular/common';
@@ -91,6 +91,17 @@ import localeIT from '@angular/common/locales/it';
 registerLocaleData(localeDECH);
 registerLocaleData(localeFR);
 registerLocaleData(localeIT);
+```
+
+### Setup service
+In your base [`AppComponent`](https://github.com/raphibolliger/AngularNgxTranslate/blob/master/src/app/app.component.ts) you have to initialize the `TranslateService` with a base/fallback language and the acutal language wich should be used when the app is launched.
+```TypeScript
+...
+constructor(public translate: TranslateService) {
+  translate.setDefaultLang("en");
+  translate.use("en");
+}
+...
 ```
 
 ### Localize elements
@@ -151,6 +162,10 @@ This TranslateSelectorPipe implementation was crated by [@atiris](https://github
 
 ### Switch between languages
 With the language service it's easy to switch between languages. To switch to the required language, call `translate.use(lang: string)`
+
+## Tests
+tbd  
+- https://github.com/ngx-translate/core/issues/235
 
 # Documentation and help
 A complete guide and more examples for ngxTranslate can be found at the official GitHub repository.  
