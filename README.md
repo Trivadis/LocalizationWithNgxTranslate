@@ -94,7 +94,7 @@ registerLocaleData(localeIT);
 ```
 
 ### Setup service
-In your base [`AppComponent`](https://github.com/raphibolliger/AngularNgxTranslate/blob/master/src/app/app.component.ts) you have to initialize the `TranslateService` with a base/fallback language and the acutal language wich should be used when the app is launched.
+In your base [`AppComponent`](https://github.com/raphibolliger/AngularNgxTranslate/blob/master/src/app/app.component.ts) you have to initialize the `TranslateService` with a base/fallback language and the acutal language which should be used when the app is launched.
 ```TypeScript
 ...
 constructor(public translate: TranslateService) {
