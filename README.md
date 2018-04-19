@@ -28,7 +28,7 @@ Actual status information about versions and dependencies are available at the o
 
 ### Translation file
 
-You need a JSON resource file for each language. Default location is [`assets/i18n/xx-XX.json`](tree/master/src/assets/i18n). The resource file contains keys and related texts.
+You need a JSON resource file for each language. Default location is [`assets/i18n/xx-XX.json`](src/assets/i18n). The resource file contains keys and related texts.
 ```JSON
 {
     "HOME": {
@@ -172,5 +172,5 @@ A complete guide and more examples for ngxTranslate can be found at the official
 https://github.com/ngx-translate/core
 
 
-https://github.com/AngularAtTrivadis/LocalizationWithNgxTranslate/blob/master/AngularAtTrivadis/AngularNgxTranslate/tree/master/src/assets/i18n
+https://github.com/AngularAtTrivadis/LocalizationWithNgxTranslate/blob/master/tree/master/src/assets/i18n
 https://github.com/AngularAtTrivadis/LocalizationWithNgxTranslate/tree/master/src/assets/i18n
