@@ -44,7 +44,7 @@ You need a JSON resource file for each language. Default location is [`assets/i1
 It is possible to define nested elements in JSON resource files.
 
 ### Imports and definitions
-Import `TranslateModule`, `TranslateLoader` and `TranslateHttpLoader` in [`app.module.ts`](AngularAtTrivadis/AngularNgxTranslate/blob/master/src/app/app.module.ts) the HttpLoader is used to load translation files from assets folder.
+Import `TranslateModule`, `TranslateLoader` and `TranslateHttpLoader` in [`app.module.ts`](src/app/app.module.ts) the HttpLoader is used to load translation files from assets folder.
 
 ```TypeScript
 // ngxTranslate imports
@@ -79,7 +79,7 @@ export function TranslateLoaderFactory(http: HttpClient) {
 })
 ```
 
-To have native i18n support for dates, numbers, percentages and currencies you need to import and register each locale in [`app.module.ts`](AngularAtTrivadis/AngularNgxTranslate/blob/master/src/app/app.module.ts)
+To have native i18n support for dates, numbers, percentages and currencies you need to import and register each locale in [`app.module.ts`](src/app/app.module.ts)
 ```TypeScript
 // imports for native i18n support for dates, numbers, percentages
 import { registerLocaleData } from '@angular/common';
@@ -94,7 +94,7 @@ registerLocaleData(localeIT);
 ```
 
 ### Setup service
-In your base [`AppComponent`](AngularAtTrivadis/AngularNgxTranslate/blob/master/src/app/app.component.ts) you have to initialize the `TranslateService` with a base/fallback language and the acutal language which should be used when the app is launched.
+In your base [`AppComponent`](src/app/app.component.ts) you have to initialize the `TranslateService` with a base/fallback language and the acutal language which should be used when the app is launched.
 ```TypeScript
 ...
 constructor(public translate: TranslateService) {
@@ -150,7 +150,7 @@ Detailed information of all pipes are available at the official angular document
 
 #### ICU (plurals, genders and more)
 
-To achive localization of ICU's a custom pipe is needed. You can use the [`TranslateSelectorPipe`](AngularAtTrivadis/AngularNgxTranslate/blob/master/src/app/pipes/TranslteSelectorPipe.ts) implementation of this project.
+To achive localization of ICU's a custom pipe is needed. You can use the [`TranslateSelectorPipe`](src/app/pipes/TranslteSelectorPipe.ts) implementation of this project.
 
 ```html
 <span>
@@ -170,7 +170,3 @@ tbd
 # Documentation and help
 A complete guide and more examples for ngxTranslate can be found at the official GitHub repository.  
 https://github.com/ngx-translate/core
-
-
-https://github.com/AngularAtTrivadis/LocalizationWithNgxTranslate/blob/master/tree/master/src/assets/i18n
-https://github.com/AngularAtTrivadis/LocalizationWithNgxTranslate/tree/master/src/assets/i18n
