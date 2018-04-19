@@ -1,4 +1,4 @@
-[//]: # (ng build --prod --op docs  --base-href /AngularNgxTranslate/)
+[//]: # (ng build --prod --op docs  --base-href /LocalizationWithI18N/)
 
 # Angular localization with ngxTranslate
 
